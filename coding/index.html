@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html  lang="en">
+    <head>
+<link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+<div class="contaier">
+    <div> <h1 class="header_text"> Will you be my valentine?</h1>
+    </div>
+    <div class="img-container"><img src="b9b232952b22a6dfcee8148f2650129b.gif"> </div>
+    <div class="buttons">
+        <button class="btn" id="yesbutton" onclick="nextpage()"> 
+            Yes
+        </button>
+        <button class="btn" id="nobutton" onmouseover="moveButton()" onclick="moveButton()">
+          No
+        </button> 
+        <script>
+            function nextpage() {
+                window.location.href = "yes.html";
+            }
+
+            function moveButton() { var x = Math.random() * (window.innerWidth - document.getElementById('nobutton').offsetWidth) - 85;
+                var y = Math.random() * (window.innerHeight - document.getElementById('nobutton').offsetHeight)- 48;
+                document.getElementById('nobutton').style.left = `${x}px`;
+                document.getElementById('nobutton').style.top=`${y}px`;
+            }
+        </script>
+        </div>
+</div>
+    </body>
+</html>
